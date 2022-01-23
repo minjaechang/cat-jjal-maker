@@ -144,6 +144,7 @@
           "https://cataas.com/cat/595f280b557291a9750ebf65/says/JavaScript";
 
         // function을 등록함으로써 불필요하게 localStorage에 접근하지 않도록 성능 개선
+        // 실행될 때 한번만 localStorage에 접근하도록
         const [counter, setCounter] = React.useState(() => {
           return jsonLocalStorage.getItem("counter");
         });
